@@ -1,5 +1,7 @@
 package hunter.rae;
 
+import java.util.Locale;
+
 /**
  * Created by hunter on 15.06.16.
  */
@@ -15,5 +17,14 @@ public class Triple<T1, T2, T3> extends Tuple3<T1, T3> {
     public T2 getMiddle() {
         return middle;
     }
+
+    public static void main(String[] args) {
+        Triple<Long, String, Integer> tr = null;
+        tr.getMiddle();
+    }
+
+    // Tuple3<Long, Integer>
+    // Triple<Long, String, Integer>
+
 
 }
