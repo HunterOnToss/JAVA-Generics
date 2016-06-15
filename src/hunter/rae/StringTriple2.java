@@ -5,6 +5,10 @@ package hunter.rae;
  */
 public class StringTriple2 extends SimpleTriple<String> {
 
+    // Tuple3<String, String>
+    // SimpleTriple<String>
+    // StringTriple2
+
     public StringTriple2(String left, String middle, String right) {
         super(left, middle, right);
     }
