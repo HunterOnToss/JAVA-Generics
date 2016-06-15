@@ -1,0 +1,25 @@
+package hunter.rae;
+
+import java.util.Objects;
+
+/**
+ * Created by hunter on 15.06.16.
+ */
+public class Tuple {
+
+    private final Object left;
+    private final Object right;
+
+    public Tuple(Object left, Object right) {
+        this.left = left;
+        this.right = right;
+    }
+
+    public Object getLeft() {
+        return left;
+    }
+
+    public Object getRight() {
+        return right;
+    }
+}
