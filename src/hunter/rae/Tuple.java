@@ -1,25 +1,23 @@
 package hunter.rae;
 
-import java.util.Objects;
-
 /**
  * Created by hunter on 15.06.16.
  */
-public class Tuple {
+public class Tuple<T> {
 
-    private final Object left;
-    private final Object right;
+    private final T left;
+    private final T right;
 
-    public Tuple(Object left, Object right) {
+    public Tuple(final T left, final T right) {
         this.left = left;
         this.right = right;
     }
 
-    public Object getLeft() {
-        return left;
+    public T getRight() {
+        return right;
     }
 
-    public Object getRight() {
-        return right;
+    public T getLeft() {
+        return left;
     }
 }

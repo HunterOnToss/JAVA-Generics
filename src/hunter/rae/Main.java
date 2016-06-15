@@ -3,19 +3,27 @@ package hunter.rae;
 public class Main {
 
     public static void main(String[] args) {
-        //Простой класс для хранения каких-либо данных, не важно каких
-        final Tuple student1 = new Tuple(1, "Stas");
-        final String name = (String) student1.getRight();
-        System.out.println(name);
+        StringTuple st = new StringTuple("left", "right");
+//        java 6
+//        final Tuple<String> st2 = new Tuple<String>("left", "right");
+        final Tuple<String> st2 = new Tuple<>("l", "r");
+        System.out.println(st2.getLeft());
+        //generic не работают с примитивами
+        final Tuple<Integer> it = new Tuple<>(14, 28);
+        System.out.println(it.getLeft() + 300);
+
+        Tuple<SuperClass> tuple = new Tuple<>(new SuperClass(), new SuperClass());
+        System.out.println(tuple.getLeft());
+        //simple -
+        //safe +
+        //size +
     }
-    // Проблема!!!
 
-    //Три пути влияющие на решения данной проблемы
+    private static class SuperClass {
 
-    //simple
-    //safe (static-typing)
-    //size
-
-    //python (simple, size small)
-    //go для каждого нового типа пишут свой класс (StringTuple) (simple, safe, size big)
+        @Override
+        public String toString() {
+            return "Super";
+        }
+    }
 }
